@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header" id="titulo">
+            <h1>SISTEMA REPRESENTACIONAL PREFERENCIAL</h1>
+            <p>Para cada uma das afirmativas abaixo, numere todos os quadrados de acordo com o seguinte sistema para indicar as suas preferências:</p>
+            <div class="card" id="opcoes">
+                <ul>
+                    <li><span>1</span> A que menos descreve você</li>
+                    <li><span>2</span> A próxima melhor</li>
+                    <li><span>3</span> A próxima melhor descrição</li>
+                    <li><span>4</span> A que melhor descreve você</li>
+                </ul>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <h3>Eu tomo decisões importantes baseado em:</h3>
+                <div class="selector">
+                    <label for="">Intuição e nível de conforto</label>
+                    <select name="" id="c1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+
+                <div class="selector">
+                    <label for="">Como a ideia soa melhor para mim</label>
+                    <select name="" id="a1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="selector">
+                    <label for="">A impressão que ela me dá, que parece melhor</label>
+                    <select name="" id="v1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+
+                </div>
+                <div class="selector">
+                    <label for="">Um estudo/exame preciso e minucioso do assunto</label>
+                    <select name="" id="d1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <h3>Durante uma discussão eu sou mais influenciado por:</h3>
+                <div class="selector">
+                    <label for="">O tom de voz da outra pessoa</label>
+                    <select name="" id="a2">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+
+                </div>
+                <div class="selector">
+                    <label for="">Se eu posso ou não ver o argumento da outra pessoa</label>
+                    <select name="" id="v2">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+
+                <div class="selector">
+                    <label for="">A lógica do argumento da pessoa</label>
+                    <select name="" id="d2">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+
+                <div class="selector">
+                    <label for="">Se eu entro em contato ou não com os sentimentos reais do outro</label>
+                    <select name="" id="c2">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <h3>Quando me comunico com os outros, é mais importante para mim:</h3>
+
+                <div class="selector">
+                    <label for="">Do modo como me visto e aparento</label>
+                    <select name="" id="v3">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+
+                </div>
+                <div class="selector">
+                    <label for="">Pelos sentimentos que compartilho</label>
+                    <select name="" id="c3">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+
+                </div>
+                <div class="selector">
+                    <label for="">Pelas palavras que escolho</label>
+                    <select name="" id="d3">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+
+                </div>
+                <div class="selector">
+                    <label for="">Pelo tom da minha voz</label>
+                    <select name="" id="a3">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <h3>Eu tenho muita facilidade para:</h3>
+                <div class="selector">
+                    <label for="">Achar o volume e a sintonia ideais num sistema de som</label>
+                    <select name="" id="a4">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+
+                <div class="selector">
+                    <label for="">Selecionar o ponto mais relevante relativo a um assunto interessante</label>
+                    <select name="" id="d4">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+
+                <div class="selector">
+                    <label for="">Escolher os móveis mais confortáveis</label>
+                    <select name="" id="c4">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+
+                <div class="selector">
+                    <label for="">Escolher as combinações de cores mais ricas e atraentes</label>
+                    <select name="" id="v4">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h3>Percebo-me assim:</h3>
+                <div class="selector">
+                    <label for="">Eu estou muito em sintonia com os sons do ambiente</label>
+                    <select name="" id="a5">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+
+                <div class="selector">
+                    <label for="">Eu sou muito capaz de raciocinar com fatos e dados novos</label>
+                    <select name="" id="d5">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+
+
+                <div class="selector">
+                    <label for="">Eu sou muito sensível à maneira como a roupa veste o meu corpo</label>
+                    <select name="" id="c5">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+
+
+                <div class="selector">
+                    <label for="">Eu respondo fortemente às cores e à aparência de uma sala</label>
+                    <select name="" id="v5">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                </div>
+            </div>
+
+
+
+            <div class="bottom">
+                <button>Enviar</button>
+            </div>
+        </form>
+
+
+        <div id="graph" class="graph hide">
+            <h1>
+                Resultado
+            </h1>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+
+
+        <div id="explica" class="explica hide">
+
+            <!--INICIO VISUAL !-->
+            <div class="row">
+                <h2 style="text-align:center; padding: 10px;">
+                    Visual
+                </h2>
+                <p style="text-align:center; padding: 10px; text-justify: auto;">
+                    O sistema visual é usado para nossas imagens internas, visualização, "sonhar acordado" e imaginação, que traduzem a você a significância das coisas. <br> Com uma preferência visual você pode ter interesse em desenhar, decorar interiores,
+                    moda, artes visuais, TV, filmes, fotografia.
+                </p>
+                <div class="column">
+                    <h4>
+                        Pessoas do estilo visual
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Veem as coisas como se fossem figuras<br> - Memorizam criando imagens visuais <br> - Aprendem rapidamente<br> - Ficam facilmente entediadas se não tiverem planos<br> - Valorizam o tempo, e por isso gostam que as coisas comecem
+                            e acabem pontualmente <br> - Preferem acessar o ‘quadro geral’ do que os detalhes <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        Expressões Comuns
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Estou começando a ver aonde você quer chegar <br> - Não está claro o bastante <br> - Não gosto de entrar numa reunião completamente às cegas <br> - Me dê apenas linhas gerais <br> - Quero ter uma outra perspectiva desse assunto
+                            <br> - Ainda está tudo muito nebuloso <br> - Sua explicação foi bem ilustrativa <br> - Você pode esclarecer isso? <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        O que os outros GOSTAM nos comunicadores do estilo VISUAL
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Passam de um assunto a outro num piscar de olhos; <br> - Entendem rapidamente o “quadro geral” <br> - São grandes administradores do tempo; <br> - São ótimos em sugerir ideias em ‘linhas gerais’ ou que abrangem ‘visões futuras’.
+                            <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        O que os outros consideram um DESAFIO nos comunicadores do estilo VISUAL
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Tornam-se rígidos e inflexíveis quando se deparam com mudanças de ritmo ou programação; <br> - São impacientes quando se trata de ouvir ou ler detalhes; <br> - Tendem a pular os detalhes. <br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--FINAL VISUAL !-->
+            <!--INICIO AUDITIVO !-->
+            <div class="row">
+                <h2 style="text-align:center; padding: 10px;">
+                    Auditivo
+                </h2>
+                <p style="text-align:center; padding: 10px; text-justify: auto;">
+                    O sistema auditivo é usado para ouvir sons internamente e re-ouvir as vozes de outras pessoas.<br> Com uma preferência auditiva, você pode ter interesse em línguas, escrever, música, treinamentos.<br> Tudo o que é ouvido, é gravado
+                    e compreendido.
+                </p>
+                <div class="column">
+                    <h4>
+                        Pessoas do estilo Auditivo
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Lembram-se do que ouviram, palavra por palavra <br> - Aprendem ouvindo e geralmente não fazem anotações <br> - São boas contadoras de histórias <br> - Falam sozinhas quando estão trabalhando ou se concentrando (você as ouvirá
+                            com frequência emitindo sons como ahh, hmmm, ohhh...) <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        Expressões Comuns
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Conte mais <br> - Estou ouvindo <br> - Algo me diz que isso vai funcionar <br> - Foi como música para os meus ouvidos <br> - Que voz esganiçada! <br> - Escute aqui, você trouxe o livro? <br> - Nossas opiniões estão bem afinadas
+                            <br> - Essa expressão soa meio ambígua <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        O que os outros GOSTAM nos comunicadores do estilo VISUAL
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Eles são normalmente excelentes palestrantes; <br> - São pessoas cheias de ideias; <br> - Amam discussões e gostam de dar longas descrições e explicações; <br> - Muitos são grandes escritores e editores; <br> - São grandes
+                            contadores de histórias <br> - Gostam de aperfeiçoar tanto coisas quanto processos. <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        O que os outros consideram um DESAFIO nos comunicadores do estilo VISUAL
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Eles tendem a ser bruscos, duros ou parecerem diretos demais; <br> - Ser diplomático é um desafio para eles; <br> - Dão opiniões firmes, quer elas tenham sido solicitadas ou não; <br> - Se enfurecem com facilidade quando
+                            percebem que não estão sendo ouvidos; <br> - Quando estão com raiva, discutem para defender sua opinião e culpam os outros; <br> - Interrompem com frequência a fala dos outros e têm dificuldade em deixar que concluam suas frases;
+                            <br> - Tendem a pular de assunto para outro; <br> - Tendem a ficar emburrados ou a se retrair quando as suas ideias não são aceitas <br> - Podem se apaixonar pelo som da própria voz; <br> - Ficam repetindo as coisas até terem
+                            certeza de que estão sendo ouvidos <br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--FINAL AUDITIVO !-->
+            <!--INICIO CINESTÉSICO !-->
+            <div class="row">
+                <h2 style="text-align:center; padding: 10px;">
+                    Cinestésico
+                </h2>
+                <p style="text-align:center; padding: 10px; text-justify: auto;">
+                    O sistema cinestésico é feito de sensação de equilíbrio, de toque e de nossas demais sensações. <br>Com a preferência cinestésica, você pode ter interesse em esportes, ginástica, dança conversa com pessoas, ergonomia e relacionamentos
+                    e uma característica sensível.
+                </p>
+                <div class="column">
+                    <h4>
+                        Pessoas do estilo Cinestésico
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - costumam falar devagar <br> - aprendem melhor fazendo <br> - precisam de tempo para se “sentir a vontade” com novas informações <br> - são capazes de dizer que “sentem” que alguma coisa está certa ou errada quando alguém
+                            lhes pede para tomar uma decisão <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        Expressões Comuns
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - não vamos tocar nesse assunto <br> - me mostre o caminho para entender isso <br> - isso simplesmente me irrita <br> - não peguei bem o que você disse <br> - tenho a sensação de que esse é o caminho <br> - estou começando
+                            a por a mão na massa <br> - e onde é que eu me encaixo nessa história? <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        O que os outros GOSTAM nos comunicadores do estilo VISUAL
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - São bons em construir relacionamentos <br> - São extremamente leais <br> - Estão sempre disponíveis para ajudar e oferecer apoio <br> - São atentos aos detalhes <br> - Trabalham muito bem em equipe <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        O que os outros consideram um DESAFIO nos comunicadores do estilo VISUAL
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - A maioria tem dificuldade em tomar decisões rápidas; <br> - Podem se sentir sufocados diante de muitas opções; <br> - Tendem a dar mais detalhes do que a maioria das pessoas precisa ou quer; <br> - Podem ser lentos ou metódicos
+                            e, portanto, levar mais tempo que os outros para concluir uma tarefa; <br> - Podem ser carentes e, portanto, exigir “altos cuidados” em relacionamentos pessoais e profissionais. <br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--FINAL CINESTÉSICO !-->
+            <!--INICIO DIGITAL !-->
+            <div class="row">
+                <h2 style="text-align:center; padding: 10px;">
+                    Digital
+                </h2>
+                <p style="text-align:center; padding: 10px; text-justify: auto;">
+                    O sistema digital (ou auditivo digital) é a maneira de pensar usando palavras e falar consigo mesmo (diálogo interno).<br> Com esse sistema, você pensa basicamente conversando com você e tende a ser mais racional e lógico.<br> Poderá
+                    ter interesse por coisas menos diretas, que exigem reflexão e processamento.
+                </p>
+                <div class="column">
+                    <h4>
+                        Pessoas do estilo Digital
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Memorizam as coisas passo-a-passo, e por sequência <br> - Processam informação de um jeito metódico, racional e lógico <br> - Prestam muita atenção aos detalhes <br> - Tem grande necessidade de dar sentido ao mundo à sua
+                            volta <br> - Aprendem elaborando coisas mentalmente <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        Expressões Comuns
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Sem dúvida alguma <br> - Palavra por palavra <br> - Descreva em detalhes <br> - Vamos tentar deduzir as consequências <br> - Mas isso faz sentido? <br> - Preste atenção <br> - Eu sei <br> - Entendo o que você quer dizer <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        O que os outros GOSTAM nos comunicadores do estilo VISUAL
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - São bons em resolver problemas complexos; <br> - São grandes estrategistas; <br> - São excelentes em sequenciar e estruturar tarefas e projetos; <br> - Administram muito bem os detalhes; <br> - São extremamente hábeis para
+                            planejar eventos, festas e excursões; <br> - Veem como as partes se encaixam para formar o “quadro geral”; <br> - São extremamente leais. <br>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>
+                        O que os outros consideram um DESAFIO nos comunicadores do estilo VISUAL
+                    </h4>
+                    <div class="card">
+                        <p>
+                            - Eles demoram a confiar em novas pessoas, novas coisas e até novos conceitos; <br> - Odeiam ser interrompidos; <br> - Podem ser muito teimosos e preferem quando lhes pedem para fazer alguma coisa, em vez de lhes dizerem como
+                            fazer; <br> - Não dão informações espontaneamente; mas só quando lhes pedem para fazê-lo <br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--FINAL DIGITAL !-->
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+<script>
+</script>
+
+</html>

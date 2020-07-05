@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+}
+
+.content .header h1 {
+    text-align: center;
+}
+
+.content p {
+    text-align: center;
+}
+
+.content .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border: 1px black solid;
+    border-radius: 8px;
+}
+
+.content .card span {
+    font-weight: bold;
+}
+
+.content .card li {
+    list-style: none;
+}
+
+.content .quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    max-width: 900px;
+    margin: 0 20px;
+}
+
+form .form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+form .form-group .selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid grey;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+.bottom button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #23364e;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.graph {
+    height: 500px;
+    width: 500px;
+    text-align: center;
+}
+
+.explica {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Float four columns side by side */
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+
+/* Remove extra left and right margins, due to padding in columns */
+
+.row {
+    margin: 0 -5px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
